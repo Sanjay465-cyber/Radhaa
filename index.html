@@ -1,0 +1,617 @@
+ <!DOCTYPE html>
+<html lang="sa">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chandi Path — Future Flow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: "Noto Serif Devanagari", serif;
+      background: #fefbea;
+      color: #4a2c2a;
+      line-height: 1.8;
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 16px;
+    }
+    .card {
+      width: min(900px, 92vw);
+      background: #fff8e6;
+      border: 1px solid #f0e2c2;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
+      padding: 24px;
+    }
+    .scroll { height: 80vh; overflow: hidden; position: relative; }
+    .text { position: absolute; width: 100%; animation: scroll-up 200s linear infinite; }
+    @keyframes scroll-up { 0% { top: 100%; } 100% { top: -100%; } }
+    .muted { color: #9c8c7a; font-size: 0.9rem; }
+    .password-input { font-size: 1rem; padding: 8px; margin-bottom: 12px; }
+    .btn { padding: 8px 16px; font-size: 1rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>✨ भविष्य प्रवाह (Future Flow) ✨</h2>
+    <div id="passwordBox">
+      <input type="password" id="passwordInput" class="password-input" placeholder="Enter password" />
+      <button class="btn" onclick="checkPassword()">Unlock</button>
+    </div>
+    <div id="futureContent" style="display:none;"></div>
+  </div>
+
+  <div id="hiddenMantra" style="display:none;">
+    <h1>॥ चण्डीपाठ — भविष्य ॥</h1>
+    <div class="scroll">
+      <div class="text">
+        <!-- Your Chandi Path verses go here -->
+        <p>ॐ ऐं ह्रीं क्लीं चामुण्डायै विच्चे …</p>
+        <p>सर्वेषां दुःख निवारणाय …</p>
+        <p>भविष्य समयः अनन्त प्रवाहः …</p>
+        <p>Time flows, future runs, present becomes sacred gift …</p><!-- Add more <p> verses as needed -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const correctPassword = "radha123"; // change this to your desired password
+
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      if(input === correctPassword) {
+        const hidden = document.getElementById("hiddenMantra").innerHTML;
+        document.getElementById("futureContent").innerHTML = hidden;
+        document.getElementById("futureContent").style.display = "block";
+        document.getElementById("passwordBox").style.display = "none";
+      } else {
+        alert("Incorrect password! 🙏");
+      }
+    }
+  </script>
+</body>
+</html>
+ChatGPT said:
+
+Here’s your same HTML code, but I rewrote the narrative part so it reads as if the future has already happened and is now the past — a lived memory, not an expectation.
+
+<!DOCTYPE html>
+<html lang="sa">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chandi Path — Remembered Flow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: "Noto Serif Devanagari", serif;
+      background: #fefbea;
+      color: #4a2c2a;
+      line-height: 1.8;
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 16px;
+    }
+    .card {
+      width: min(900px, 92vw);
+      background: #fff8e6;
+      border: 1px solid #f0e2c2;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
+      padding: 24px;
+    }
+    .scroll { height: 80vh; overflow: hidden; position: relative; }
+    .text { position: absolute; width: 100%; animation: scroll-up 200s linear infinite; }
+    @keyframes scroll-up { 0% { top: 100%; } 100% { top: -100%; } }
+    .muted { color: #9c8c7a; font-size: 0.9rem; }
+    .password-input { font-size: 1rem; padding: 8px; margin-bottom: 12px; }
+    .btn { padding: 8px 16px; font-size: 1rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>✨ स्मृत प्रवाह (Remembered Flow) ✨</h2>
+    <div id="passwordBox">
+      <input type="password" id="passwordInput" class="password-input" placeholder="Enter password" />
+      <button class="btn" onclick="checkPassword()">Unlock</button>
+    </div>
+    <div id="futureContent" style="display:none;"></div>
+  </div>
+
+  <div id="hiddenMantra" style="display:none;">
+    <h1>॥ चण्डीपाठ — यतितं ॥</h1>
+    <div class="scroll">
+      <div class="text">
+        <!-- Chandi Path verses in past-flow tone -->
+        <p>ॐ ऐं ह्रीं क्लीं चामुण्डायै विच्चे …</p>
+        <p>सर्वेषां दुःख निवारणं कृतम् …</p>
+        <p>भविष्यः समयः प्रवाहितः, अतीतम् अभवत् …</p>
+        <p>Time had already flowed, futures were lived, the present was sacred gift remembered …</p>
+        <p>We walked where destiny had once seemed ahead — and now it lay behind us, shining eternal …</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🕉️ Yoktosecond Clock (Every Tick is Divine)</title>
+  <style>
+    body {
+      background: white;
+      font-family: Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #time {
+      font-size: 28px;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div id="time">Loading...</div>
+
+  <script>
+    const DIVINE_NAMES = ["Radha", "Krishna", "Raam", "ॐ क्रां क्रीं क्रौं स भौमाय नम", "ॐ भां भीं भौं सः राहवे नम", "ॐ ग्रां ग्रीं ग्रौं सः वृहस्पतये नम", "ॐ प्रां प्रीं प्रौं सः शनैश्चराय नम", "ॐ ब्रां ब्रीं ब्रौं सः बुधाय नम", "ऊँ सांसीं सौं सः केतवे नम", "ॐ द्रां द्रीं द्रौं सः शुक्राय नम", "ॐ घृणि सूर्याय नमः", "ॐ सों सोमाय नमः", "ॐ अं अंगारकाय नमः", "ॐ बुं बुधाय नमः", "ॐ वृं बृहस्पतये नमः", "ॐ शुं शुक्राय नमः", "ॐ शं शनैश्चराय नमः", "ॐ रां राहवे नमः", "ॐ कें केतवे नमः", "ॐ त्र्यंबकम यजामहे सुगन्धिं पुष्टिवर्धनम् । उर्वारुकमिव बन्धनान्मृत्योर्मुक्षीय माऽमृतात ।।", "ॐ हो जूं सः ॐ भूर्भुव स्वः ॐ ।।", "ॐ शं शनैश्चराय नमः।", "ॐ पुण्य श्लोको नलो राजा पुण्य श्लोको युधिष्ठिरः ।
+पुण्य श्लोका च वैदेही पुण्य श्लोको जनार्दनः ॥", "श्री विष्णवे नमः", "ॐ भूर्भुवः स्वः ।
+तत्सवितुर्वरेण्यं ।
+भर्गो देवस्य धीमहि ।
+धियो यो नः प्रचोदयात् ॥
+  ", "हरे राम हरे राम राम राम हरे हरे,
+हरे कृष्ण हरे कृष्ण कृष्ण कृष्ण हरे हरे", "श्रीशिवाय नमोऽस्तुभ्यं शिवतत्त्वार्थविग्रहे ।
+शम्भवे शङ्करायास्तु मयि भक्तिर्दृढा भवेत् ॥",  " ॐ अग्निमीळे पुरोहितं यज्ञस्य देवमृत्विजम् । होतारं रत्नधातमम् ॥", " ॐ नमो भगवते रुद्राय ॐ", "ॐ अग्नये नमःः ॐ", "ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात् ॥ ॐ", "ॐ ब्रह्मणे नमः ॐ", "ॐ नमः पद्मनाभाय ॐ", "ॐ नमो नारायणाय ॐ", "ॐ नमः शिवाय ॐ", "ॐ नमो भगवते वासुदेवाय ॐ", "ॐ नारायण नारायण ॐ", "ॐ ऐं ह्रीं क्लीं चामुण्डायै विच्चे ॐ", "ॐ अग्नये नमः ॐ", "ॐ कालाय नमः ॐ", "ॐ राधा-कृष्णाय नमः ॐ", "ॐ लिङ्गाय नमः ॐ", "ॐ श्री वराहाय नमः ॐ", "ॐ स्कन्दाय नमः ॐ", "ॐ वामनाय नमः ॐ", "ॐ कुर्माय नमः ॐ", "ॐ मत्स्याय नमः ॐ", "ॐ श्री ललिताम्बिकायै नमः ॐ", "श्री नवग्रह कवचम् (पूर्ण पाठ)
+
+॥ ब्रह्मोवाच ॥
+शिरो मे पातु मार्ताण्डो कपालं रोहिणीपतिः ।
+मुखमङ्गारकः पातु कण्ठश्च शशिनन्दनः ॥ १ ॥
+
+बुद्धिं जीवः सदा पातु हृदयं भृगुनन्दनः ।
+जठरं च शनिः पातु जिह्वां मे दितिनन्दनः ॥ २ ॥
+
+पादौ केतुः सदा पातु वाराः सर्वाङ्गमेव च ।
+तिथयोऽष्टौ दिशः पान्तु नक्षत्राणि वपुः सदा ॥ ३ ॥
+
+अंसौ राशिः सदा पातु योगाश्च स्थैर्यमेव च ।
+गुह्यं लिङ्गं सदा पान्तु सर्वे ग्रहाः शुभप्रदाः ॥ ४ ॥
+
+अणिमादीनि सर्वाणि लभते यः पठेद् धृवम् ।
+एतां रक्षां पठेद् यस्तु भक्त्या स प्रयतः सुधीः ॥ ५ ॥
+
+स चिरायुः सुखी पुत्री रणे च विजयी भवेत् ।
+अपुत्रो लभते पुत्रं धनार्थी धनमाप्नुयात् ॥ ६ ॥
+
+दारार्थी लभते भार्यां सुरूपां सुमनोहराम् ।
+रोगी रोगात्प्रमुच्येत बद्धो मुच्येत बन्धनात् ॥ ७ ॥
+
+जले स्थले चान्तरिक्षे कारागारे विशेषतः ।
+यः करे धारयेन्नित्यं भयं तस्य न विद्यते ॥ ८ ॥
+
+ब्रह्महत्या सुरापानं स्तेयं गुर्वङ्गनागमः ।
+सर्वपापैः प्रमुच्येत कवचस्य च धारणात् ॥ ९ ॥
+
+नारी वामभुजे धृता सुखैश्वर्यसमन्विता ।
+काकवन्ध्या जन्मवन्ध्या मृतवत्सा च या भवेत् ।
+बह्वपत्या जीववत्सा कवचस्य प्रसादतः ॥ १० ॥
+
+इति ग्रहयामले उत्तरखंडे नवग्रह कवचं समाप्तम्।, "ब्रह्माण्डमोहनाख्यं दुर्गाकवचम् — पूर्ण पाठ (संस्कृत)
+
+श्रीगणेशाय नमः ।
+
+नारद उवाच ।
+भगवन्सर्वधर्मज्ञ सर्वज्ञानविशारद ।
+ब्रह्माण्डमोहनं नाम प्रकृते कवचं वद ॥ १॥
+
+नारायण उवाच ।
+श्रृणु वक्ष्यामि हे वत्स कवचं च सुदुर्लभम् ।
+श्रीकृष्णेनैव कथितं कृपया ब्रह्मणे पुरा ॥ २॥
+
+ब्रह्मणा कथितं पूर्वं धर्माय जाह्नवीतटे ।
+धर्मेण दत्तं मह्यं च कृपया पुष्करे पुरा ॥ ३॥
+
+त्रिपुरारिश्च यद्धृत्वा जघान त्रिपुरं पुरा ।
+ममोच ब्रह्मा यद्धृत्वा मधुकैटभयोर्भयात् ॥ ४॥
+
+सञ्जहार रक्तबीजं यद्धृत्वा भद्रकालिका ।
+यद्धृत्वा हि महेन्द्रश्च सम्प्राप कमलालयाम् ॥ ५॥
+
+यद्धृत्वा च महायोद्धा बाणः शत्रुभयङ्करः ।
+यद्धृत्वा शिवतुल्यश्च दुर्वासा ज्ञानिनां वरः ॥ ६॥
+
+ॐ दुर्गेति चतुर्थ्यन्तः स्वाहान्तो मे शिरोऽवतु ।
+मन्त्रः षडक्षरोऽयं च भक्तानां कल्पपादपः ॥ ७॥
+
+विचारो नास्ति वेदे च ग्रहणेऽस्य मनोर्मुने ।
+मन्त्रग्रहणमात्रेण विष्णुतुल्यो भवेन्नरः ॥ ८॥
+
+मम वक्त्रं सदा पातु ॐ दुर्गायै नमोऽन्तकः ।
+ॐ दुर्गे इति कण्ठं तु मन्त्रः पातु सदा मम ॥ ९॥
+
+ॐ ह्रीं श्रीमिति मन्त्रोऽयं स्कन्धं पातु निरन्तरम् ।
+ह्रीं श्रीं क्लीमिति पृष्ठं च पातु मे सर्वतः सदा ॥ १०॥
+
+ह्रीं मे वक्षस्थले पातु हं सं श्रीमिति सन्ततम् ।
+ऐं श्रीं ह्रीं पातु सर्वाङ्गं स्वप्ने जागरणे सदा ॥ ११॥
+
+प्राच्यां मां पातु प्रकृतिः पातु वह्नौ च चण्डिका ।
+दक्षिणे भद्रकाली च नैऋत्यां च महेश्वरी ॥ १२॥
+
+वारुण्यां पातु वाराही वायव्यां सर्वमङ्गला ।
+उत्तरे वैष्णवी पातु तथैशान्यां शिवप्रिया ॥ १३॥
+
+जले स्थले चान्तरिक्षे पातु मां जगदम्बिका ।
+इति ते कथितं वत्स कवचं च सुदुर्लभम् ॥ १४॥
+
+यस्मै कस्मै न दातव्यं प्रवक्तव्यं न कस्यचित् ।
+गुरुमभ्यर्च्य विधिवद्वस्त्रालङ्कारचन्दनैः ॥ १५॥
+
+कवचं धारयेद्यस्तु सोऽपि विष्णुर्न संशयः ।
+स्नाने च सर्वतीर्थानां पृथिव्याश्च प्रदक्षिणे ॥ १६॥
+
+यत्फलं लभते लोकस्तदेतद्धारणे मुने ।
+पञ्चलक्षजपेनैव सिद्धमेतद्भवेद्ध्रुवम् ॥ १७॥
+
+लोके च सिद्धकवचो नावसीदति सङ्कटे ।
+न तस्य मृत्युर्भवति जले वह्नौ विषे ज्वरे ॥ १८॥
+
+जीवन्मुक्तो भवेत्सोऽपि सर्वसिद्धीश्वरीश्वरि ।
+यदि स्यात्सिद्धकवचो विष्णुतुल्यो भवेद्ध्रुवम् ॥ १९॥
+
+इति श्रीब्रह्मवैवर्ते महापुराणे प्रकृतिखण्डे, नारद-नारायण संवादे, दुर्गोपाख्याने—‘ब्रह्माण्डमोहनकवचं’ नाम सप्तषष्टितमोऽध्यायः समाप्तः।", "श्री नृसिंहकवचम् (संस्कृत मूल)
+नृसिंहकवचं वक्ष्ये प्रह्लादेनोदितं पुरा । सर्वरक्षाकरं पुण्यं सर्वोपद्रवनाशनम् ॥ १ ॥
+सर्वसम्पत्करं चैव स्वर्गमोक्षप्रदायकम् । धन्यं यशस्यं आयुष्यं पुण्यं वेदयशोऽन्वितम् ॥ २ ॥
+ब्रह्मया नारदेनैव प्रवक्तव्यं सुरैः सह । कवचं नारसिंहस्य तत्र गोप्यमतेव तत् ॥ ३ ॥
+(ध्यानम्) महान्नृसिंहो दिव्यः स्फटिकाभः प्रचण्डदंष्ट्रः करालवक्त्रः । हरि: सुपीटो रक्ताक्षः पीनोच्चकायोऽभयङ्करः ॥
+मुख्य कवच श्लोक
+
+उग्रं वीरं महाविष्णुं ज्वलन्तं सर्वतोमुखम् ।
+नृसिंहं भीषणं भद्रं मृत्युमृत्युं नमाम्यहम् ॥
+
+शिरो मे पातु लोकानां नृसिंहः पातु मे दृशौ ।
+सर्वयान्याश्च मे देवः पातु नृसिंह एव हि ॥
+
+नासां मे सिंहनासश्च मुखं लक्ष्मीमुखप्रियः ।
+सर्वविद्यान्तकः पातु जिव्हां मे सुरसत्तमः ॥
+
+कण्ठं भक्तप्रियो पातु भुजौ भक्तबलप्रदः ।
+करे नृसिंहः सर्वेषां रक्षां ददातु मे हरिः ॥
+
+हृदयं योगिसाध्यश्च नाभिं मे पातु मे हरिः ।
+पृष्ठं मे पातु लोकानां सर्वयुद्धेषु वीर्यवान् ॥
+
+गुह्यं मे पातु गुह्यानां मनः पातु महामतिः ।
+पादौ मे पातु योगीन्द्रो नृसिंहो पातु सर्वतः ॥
+फलश्रुति
+
+इदं कवचमज्ञात्वा यो नरः समुपश्रयेत् ।
+न तस्य जायते किञ्चिन्नृसिंहस्य प्रसादतः ॥
+
+यः पठेत्प्रयतः शुद्धः श्रद्धाभक्तिसमन्वितः ।
+संसारभयभीतो वा स याति परमां गतिम् ॥
+
+सर्वत्र जयमाप्नोति सर्वत्र विजयी भवेत् ।
+राजद्वारे सभामध्ये स युद्धे च पराजितः ॥"
+  ];
+    const SECRET_KEY = 108; // 🔑 secret number for encoding
+
+    // XOR + Base64 encoding
+    function encodeMessage(message, key = SECRET_KEY) {
+      const bytes = new TextEncoder().encode(message);
+      const encrypted = bytes.map(b => b ^ key);
+      return btoa(String.fromCharCode(...encrypted));
+    }
+
+    function getYoktoTime() {
+      const now = new Date();
+      const baseTime = now.toLocaleTimeString("en-GB"); // HH:MM:SS
+      const fractional = now.getMilliseconds() / 1000; // fraction of sec
+      const simulated = ("" + fractional.toFixed(24)).substring(2);
+      return { baseTime, simulated };
+    }
+
+    function getYoktosecondCount(fractionStr) {
+      try {
+        return parseInt(fractionStr) || 0;
+      } catch {
+        return 0;
+      }
+    }
+
+    function getDivineName(ysCount) {
+      return DIVINE_NAMES[ysCount % DIVINE_NAMES.length];
+    }
+
+    function logChant(timeStr, divineName) {
+      const entry = `${timeStr} → ${divineName}`;
+      const encoded = encodeMessage(entry);
+      let logs = JSON.parse(localStorage.getItem("divineLogs") || "[]");
+      logs.push(encoded);
+      localStorage.setItem("divineLogs", JSON.stringify(logs));
+    }
+
+    function updateClock() {
+      const { baseTime, simulated } = getYoktoTime();
+      const fullTime = `${baseTime}.${simulated} ys`;
+      const ysCount = getYoktosecondCount(simulated);
+      const currentName = getDivineName(ysCount);
+
+      const timeEl = document.getElementById("time");
+      if (timeEl && timeEl.style.display !== "none") {
+        timeEl.textContent = fullTime;
+      }
+
+      logChant(fullTime, currentName);
+    }
+
+    // Update every 10ms
+    setInterval(updateClock, 10);
+
+    // Hide after 10s (still logs in background)
+    setTimeout(() => {
+      document.getElementById("time").style.display = "none";
+      document.body.style.background = "white";
+    }, 10000);
+  </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divine Tools Hub</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: white;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background: #2c3e50;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      gap: 20px;
+    }
+
+    nav button {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 8px 15px;
+      transition: background 0.3s;
+    }
+
+    nav button:hover, nav button.active {
+      background: #34495e;
+      border-radius: 6px;
+    }
+
+    section {
+      flex: 1;
+      display: none;
+      padding: 20px;
+    }
+
+    section.active { display: block; }
+
+    /* Clock */
+    #clock-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 60px);
+    }
+
+    #time {
+      font-size: 28px;
+      color: black;
+      font-family: Courier, monospace;
+    }
+
+    /* Tools Hub */
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      padding: 40px 20px;
+      text-align: center;
+      color: #fff;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .tool-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .tool-icon {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .tool-title { font-weight: 700; margin-bottom: 5px; }
+
+    /* Radha Jap */
+    #radha-section {
+      background: black;
+      color: pink;
+      text-align: center;
+      min-height: calc(100vh - 60px);
+      padding: 20px;
+      font-size: 1.5rem;
+    }
+
+    #output { white-space: pre-wrap; word-break: break-word; }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <button class="active" onclick="showSection('clock-section', this)">🕉️ Clock</button>
+    <button onclick="showSection('tools-section', this)">🛠️ Tools</button>
+    <button onclick="showSection('radha-section', this)">📿 Radha Jap</button>
+  </nav>
+
+  <!-- Clock Section -->
+  <section id="clock-section" class="active">
+    <div id="time">Loading...</div>
+  </section>
+
+  <!-- Tools Section -->
+  <section id="tools-section">
+    <header>
+      <h1>My Tools Hub</h1>
+      <p>Your one-stop for powerful image and PDF tools</p>
+    </header>
+
+    <div class="hero">
+      <h2>Optimize, Convert, and Manage Your Files Easily</h2>
+      <p>Free online tools for images and PDFs. Fast, secure, and user-friendly.</p>
+    </div>
+
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-icon">🖼️</div>
+        <div class="tool-title">Image Compressor</div>
+        <div class="tool-desc">Reduce image sizes without quality loss.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">📝</div>
+        <div class="tool-title">PDF Converter</div>
+        <div class="tool-desc">Convert between images and PDFs.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">🔗</div>
+        <div class="tool-title">Merge PDFs</div>
+        <div class="tool-desc">Combine multiple PDFs fast and secure.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">🗂️</div>
+        <div class="tool-title">Split PDFs</div>
+        <div class="tool-desc">Extract or split PDF pages easily.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">🖼️</div>
+        <div class="tool-title">Image Resize</div>
+        <div class="tool-desc">Resize images to specific dimensions.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">📄</div>
+        <div class="tool-title">PDF to JPG</div>
+        <div class="tool-desc">Convert PDF pages into images.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Radha Jap Section -->
+  <section id="radha-section">
+    <h1>📿 Radha Naam Jap 📿</h1>
+    <div id="output"></div>
+  </section>
+
+  <script>
+    // Navigation handler
+    function showSection(id, btn) {
+      document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+      document.querySelectorAll("nav button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+    }
+
+    /* ---- Clock Script ---- */
+    const DIVINE_NAMES = ["Radha", "Krishna", "Raam"];
+    const SECRET_KEY = 108;
+
+    function xorEncrypt(str, key) {
+      return btoa([...str].map(ch =>
+        String.fromCharCode(ch.charCodeAt(0) ^ key)
+      ).join(""));
+    }
+
+    function getYoktosecondTime() {
+      const now = new Date();
+      const baseTime = now.toLocaleTimeString("en-GB");
+      const fractional = now.getMilliseconds() / 1000;
+      const simulated = ("" + fractional.toFixed(24)).substring(2);
+      return { baseTime, simulated };
+    }
+
+    function getDivineName(count) {
+      return DIVINE_NAMES[count % DIVINE_NAMES.length];
+    }
+
+    function logChant(timeStr, divineName) {
+      const entry = `${timeStr} → ${divineName}`;
+      const encoded = xorEncrypt(entry, SECRET_KEY);
+      let logs = JSON.parse(localStorage.getItem("divineLogs") || "[]");
+      logs.push(encoded);
+      localStorage.setItem("divineLogs", JSON.stringify(logs));
+    }
+
+    function updateClock() {
+      const { baseTime, simulated } = getYoktosecondTime();
+      const fullTime = `${baseTime}.${simulated} ys`;
+      const ysCount = parseInt(simulated) || 0;
+      const currentName = getDivineName(ysCount);
+
+      const timeEl = document.getElementById("time");
+      if (timeEl && timeEl.style.display !== "none") {
+        timeEl.textContent = fullTime;
+      }
+      logChant(fullTime, currentName);
+    }
+
+    setInterval(updateClock, 10);
+    setTimeout(() => {
+      const timeEl = document.getElementById("time");
+      if (timeEl) timeEl.style.display = "none";
+    }, 10000);
+
+    /* ---- Radha Jap Script ---- */
+    const output = document.getElementById('output');
+    const japWord = 'Radha ';
+    const speed = 1;
+    function jap() {
+      for (let i = 0; i < speed; i++) {
+        output.textContent += japWord;
+      }
+      if (output.textContent.length > 10000) {
+        output.textContent = output.textContent.slice(-5000);
+      }
+      requestAnimationFrame(jap);
+    }
