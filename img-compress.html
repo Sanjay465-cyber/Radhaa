@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Image Compression Tool</title>
+  <meta name="description" content="Compress your images easily with our responsive image compression tool. Select compression level and optimize images for web." />
+  <meta name="keywords" content="Image Compression, Responsive Tool, Optimize Images, Free Image Compressor" />
+  <meta name="author" content="YourName" />
+
+  <!-- SEO and performance best practices -->
+  <link rel="canonical" href="https://yourwebsite.com/image-compression-tool" />
+Radha842137
+  <style>
+    /* Reset and base styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+      color: #333;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #2c3e50;
+    }
+
+    /* Responsive container */
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* File input and controls */
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    label {
+      font-weight: 600;
+    }
+
+    input[type="file"] {
+      padding: 8px;
+    }
+
+    select {
+      padding: 8px;
+      width: 100%;
+      max-width: 200px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Output area */
+    .output {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .images {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* Advertisement spaces */
+    .ad-space {
+      width: 100%;
+      min-height: 90px; /* default size for ads */
+      background-color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+      border: 1px dashed #bbb;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    /* Responsive adjustments */
+    @media(max-width: 768px) {
+      .controls {
+        padding: 10px;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Responsive Image Compression Tool</h1>
+  <p>Upload an image, select compression level, and optimize easily.</p>
+</header>
+
+<!-- Advertisement space (Insert your AdSense code here) -->
+<div class="ad-space" id="ad-top">
+  <!-- Example AdSense code -->
+  <!-- Replace below with your own AdSense ad code -->
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:block; width:100%; height:90px;"
+       data-ad-client="ca-pub-3058761199763938"
+       data-ad-slot="YYYYYYYYYY"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  -->
+</div>
+
+<div class="container">
+
+  <!-- Controls for uploading and selecting compression -->
+  <section class="controls" aria-labelledby="controls-label">
+    <h2 id="controls-label" style="display:none;">Image Upload and Compression Settings</h2>
+    <label for="imageInput">Select an image:</label>
+    <input type="file" id="imageInput" accept="image/*" />
+
+    <label for="qualitySelect">Select compression quality:</label>
+    <select id="qualitySelect">
+      <option value="0.9">High (90%)</option>
+      <option value="0.75">Medium (75%)</option>
+      <option value="0.5">Low (50%)</option>
+      <option value="0.25">Very Low (25%)</option>
+    </select>
+
+    <button id="compressBtn" disabled>Compress Image</button>
+  </section>
+
+  <!-- Output for compressed images -->
+  <section class="output" aria-labelledby="output-label">
+    <h2 id="output-label" style="display:none;">Compressed Images</h2>
+
+    <div class="images" id="imagesContainer">
+      <!-- Original and compressed images will be inserted here -->
+    </div>
+  </section>
+
+</div>
+
+<!-- Advertisement space (Insert your AdSense code here) -->
+<div class="ad-space" id="ad-bottom">
+  <!-- Example AdSense code -->
+  <!-- Replace below with your own AdSense ad code -->
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:block; width:100%; height:90px;"
+       data-ad-client="ca-pub-XXXXXXXXXXXX"
+       data-ad-slot="YYYYYYYYYY"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  -->
+</div>
+
+<!-- JavaScript for functionality -->
+<script>
+  const imageInput = document.getElementById('imageInput');
+  const compressBtn = document.getElementById('compressBtn');
+  const qualitySelect = document.getElementById('qualitySelect');
+  const imagesContainer = document.getElementById('imagesContainer');
+
+let originalImage = null;
+
+// Enable button when image is selected
+imageInput.addEventListener('change', () => {
+  if (imageInput.files && imageInput.files[0]) {
+    compressBtn.disabled = false;
+    // Clear previous images
+    imagesContainer.innerHTML = '';
+  } else {
+    compressBtn.disabled = true;
+  }
+});
+
+// Handle compression
+compressBtn.addEventListener('click', () => {
+  const file = imageInput.files[0];
+  if (!file) return;
+
+  const quality = parseFloat(qualitySelect.value);
+
+  const reader = new FileReader();
+
+  reader.onload = function(e) {
+    const img = new Image();
+    img.onload = () => {
+      // Display original image
+      displayImage('Original Image', e.target.result);
+
+      // Compress image
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+
+      // Set canvas size to image size
+      canvas.width = img.width;
+      canvas.height = img.height;
+
+      ctx.drawImage(img, 0, 0);
+
+      // Get compressed image data URL
+      const compressedDataUrl = canvas.toDataURL('image/jpeg', quality);
+
+      // Display compressed image
+      displayImage('Compressed Image', compressedDataUrl);
+    };
+    img.src = e.target.result;
+  };
+
+  reader.readAsDataURL(file);
+});
+
+// Function to display images
+function displayImage(label, dataUrl) {
+  const container = document.createElement('div');
+  container.className = 'image-container';
+
+  const caption = document.createElement('p');
+  caption.textContent = label;
+
+  const img = document.createElement('img');
+  img.src = dataUrl;
+
+  container.appendChild(caption);
+  container.appendChild(img);
+  imagesContainer.appendChild(container);
+}
+</script>
+
+</body>
+</html>
