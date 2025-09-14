@@ -1,9 +1,4 @@
-import tkinter as tk
-from datetime import datetime, timedelta
-# --- All 155 Views of Time (simplified names for demo) ---
-TIME_VIEWS = [f"View {i}" for i in range(1, 156)]
-# --- Add your mantra(s) here ---
-MANTRAS = [
+
 <!DOCTYPE html>
 <html lang="sa">
 <head>
@@ -2436,74 +2431,4 @@ const YT_LINK = "https://www.youtube.com/@Vrindavan-PremRas";
   </script>
 </body>
 </html>
-    "ॐ नमः शिवाय",
-    "ॐ मणि पद्मे हूँ",
-    "ॐ श्री रामाय नमः",
-    "ॐ गं गणपतये नमः"
-]
-# Target end datetime
-TARGET = datetime(9999, 12, 31, 23, 59, 59, 999999)
-# Start from current moment
-START = datetime.now()
-# Real duration to complete simulation = 60 seconds
-SIM_DURATION = timedelta(seconds=60)
-def get_progress():
-    """Return fraction of one minute elapsed in real time."""
-    elapsed = datetime.now() - START
-    fraction = elapsed / SIM_DURATION
-    return min(1.0, fraction)
-def get_simulated_time():
-    """Map real-time progress into simulated timeline."""
-    fraction = get_progress()
-    total_span = TARGET - START
-    return START + total_span * fraction
-def get_time_view():
-    """Cycle through 155 views of time continuously."""
-    fraction = get_progress()
-    index = int(fraction * (len(TIME_VIEWS) - 1))
-    return TIME_VIEWS[index]
-def get_mantra():
-    """Cycle through mantra list based on progress."""
-    fraction = get_progress()
-    index = int(fraction * (len(MANTRAS) - 1))
-    return MANTRAS[index]
-def update_clock():
-    sim_time = get_simulated_time()
-    view = get_time_view()
-    mantra = get_mantra()
-    display = sim_time.strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]  # ms precision
-    time_label.config(text=f"{display}\n{view}")
-    mantra_label.config(text=f"{mantra}")
-    if sim_time < TARGET:
-        window.after(10, update_clock)  # keep updating until final moment
-    else:
-        time_label.config(text=f"{TARGET}\nReached Final Limit\n{TIME_VIEWS[-1]}")
-        mantra_label.config(text="🕉️ Eternal Silence 🕉️")
-# ---- GUI ----
-window = tk.Tk()
-window.title("🕉️ Cosmic Time Accelerator (155 Views)")
-window.geometry("820x260")
-window.configure(bg="white")
-window.attributes("-topmost", True)
-time_label = tk.Label(
-    window,
-    text="Loading...",
-    font=("Courier", 20),
-    fg="black",
-    bg="white",
-    pady=10
-)
-time_label.pack(expand=True)
-# New mantra label
-mantra_label = tk.Label(
-    window,
-    text="ॐ ...",
-    font=("Helvetica", 22, "bold"),
-    fg="darkblue",
-    bg="white",
-    pady=10
-)
-mantra_label.pack(expand=True)
-update_clock()
-window.mainloop()
-     
+    
